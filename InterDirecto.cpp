@@ -5,6 +5,7 @@ using namespace std;
 void interDirDer(int[] ,int);
 
 //Funcion que recorre el arreglo de Izquierda a Derecha
+void interDirIzq(int[],int);
 
 //Funcion de intercambio por señal 
 
@@ -25,7 +26,13 @@ int main(){
     }
     cout<<"\n";
     interDirDer(Arr,num);
-    cout<<"Arreglo ordenado: ";
+    cout<<"Arreglo ordenado(Derecha a Izquierda): ";
+    for(int i=0;i<num;i++){
+        cout<<Arr[i]<<"\t";
+    }
+    cout<<"\n";
+    interDirIzq(Arr,num);
+    cout<<"Arreglo ordenado(Izquierda a Derecha): ";
     for(int i=0;i<num;i++){
         cout<<Arr[i]<<"\t";
     }
@@ -41,6 +48,19 @@ void interDirDer(int A[],int n){
                 aux=A[j];
                 A[j]=A[j+1];
                 A[j+1]=aux;
+            }
+        }
+    }
+}
+
+void interDirIzq(int A[],int n){
+    for(int i=1; i<n;i++){
+        for(int j=n-1;j>=i;j--){
+            if(A[j]<A[j-1]){
+                int aux;
+                aux=A[j];
+                A[j]=A[j-1];
+                A[j-1]=aux;
             }
         }
     }
