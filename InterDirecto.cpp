@@ -8,6 +8,7 @@ void interDirDer(int[] ,int);
 void interDirIzq(int[],int);
 
 //Funcion de intercambio por señal 
+void interDirCen(int[],int);
 
 //Funcion de intercambio bidireccional que recorre el arreglo usando las 3 fnciones anteriores 
 
@@ -31,6 +32,10 @@ int main(){
 
     interDirIzq(Arr,num);
     cout<<"Arreglo ordenado(Izquierda a Derecha): ";
+    imprimirArreglo(Arr,num);
+
+    interDirCen(Arr,num);
+    cout<<"Arreglo ordenado(Por señal): ";
     imprimirArreglo(Arr,num);
 
     return 0;
@@ -61,6 +66,25 @@ void interDirIzq(int A[],int n){
                 A[j-1]=aux;
             }
         }
+    }
+}
+
+//Por señal
+void interDirCen(int A[], int n){
+    bool cen=true;
+    int i=1;
+    while(i<n-1 && cen){
+        cen=false;
+        for(int j=0;j<n-i;j++){
+            if(A[j]>A[j+1]){
+                int aux;
+                aux=A[j];
+                A[j]=A[j+1];
+                A[j+1]=aux;
+                cen=true;
+            }
+        }
+        i++;
     }
 }
 
