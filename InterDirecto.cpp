@@ -37,7 +37,7 @@ int main(){
         cin>>Arr[i];
     }
 
-    //imprimir arreglo original (predeterminado)
+    //imprimir arreglo original
     cout<<"Arreglo original: ";
     imprimirArreglo(Arr,num);
     cout<<endl;
