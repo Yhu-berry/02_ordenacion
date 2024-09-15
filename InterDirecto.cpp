@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+//Cantidad maxima de elementos del arreglo
+const int cantMaxElem=60;
+
 //Funcion que recorre el arreglo de Derecha a Izquierda
 void interDirDer(int[] ,int);
 
@@ -17,11 +20,16 @@ void interDirBi(int[],int);
 void imprimirArreglo(int[],int);
 int main(){
     int num;   
-    cout<<"Ingrese el numero de elementos ( son 4, lista predeterminada): ";
+    cout<<"Ingrese el numero de elementos (maximo "<<cantMaxElem<<"): ";
     cin>>num;  
 
-    //definir un arreglo de 4 elementos 
-    int Arr[]={25,10,20,6};
+    int Arr[cantMaxElem];
+
+    //Ingresar los elementos de la lista
+    cout<<"Ingresar los elementos de la lista "<<endl;
+    for(int i=0;i<num;i++){
+        cin>>Arr[i];
+    }
 
     //imprimir arreglo original (predeterminado)
     cout<<"Arreglo original: ";
