@@ -23,6 +23,12 @@ int main(){
     cout<<"Ingrese el numero de elementos (maximo "<<cantMaxElem<<"): ";
     cin>>num;  
 
+    //Verificar que no se exceda la maxima cantidad de elementos que es 60
+    if(num> cantMaxElem){
+        cout<<"La cantidad de elementos no puede ser mayor a 60."<<endl;
+        return 1;
+    }
+
     int Arr[cantMaxElem];
 
     //Ingresar los elementos de la lista
