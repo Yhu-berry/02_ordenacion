@@ -23,5 +23,15 @@ int main(){
 
 //Funcion shellsort
 int shellsort(int A[100], int n){
-
+    for(int k=n/2; k>0; k/=2){
+        for(int i=k; i<n; i++){
+            int aux = A[i];
+            int j;
+            for(j=i; j>=k && A[j-k]>aux; j-=k){
+                A[j] = A[j-k];
+            }
+            A[j] = aux;
+        }
+    }
+    return 0;
 }
