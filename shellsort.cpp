@@ -5,7 +5,7 @@ int shellsort(int A[100],int n);
 
 int main(){
     int num, shell,Arr[100];   
-    cout<<"n: ";cin>>num;
+    cout<<"Ingrese la cantidad de elementos: ";cin>>num;
     cout<<"Introduce los elementos del arreglo: "<<endl;
     for(int i=0;i<num;i++){
         cin>>Arr[i];
